@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/portf_style.css" media="screen" />
+<title>Joshua Morgan Portfolio</title>
+</head>
+
+<body>
+<script>
+$(document).ready(function(){
+	$('#h_container').load('resources/header.html');
+    $('#f_container').load('resources/footer.html');
+});
+</script>
+        
+<div id="b_main">
+	<div id="b_no_footer"> <!-- All above the footer -->
+    	<div id="b_sidebar"> <!-- SideBar -->
+        	<object data="resources/sidebar.html" width="100%" height="100%"></object>
+        </div> <!-- Close SideBar -->
+        
+        <div id="b_content">
+            <div id="h_container"> <!-- Header -->
+                <!-- Header inserted here -->
+            </div> <!-- Close Header -->
+                    
+            <div id="b_container" style="clear:both;"> <!-- Body -->
+            <p>
+                Info about me would go around here along with a picture nearby (focused on header and footer this whole time).
+            </p>
+            <img src="images/Profile_Picture.png" width=240 height=360 alt="Profile Picture"/>
+            </div> <!-- Close Body -->
+        </div> <!-- Close b_content -->
+    </div> <!-- Close "no footer" -->
+    
+    <div id="f_container"> <!-- Footer -->
+		<!-- Footer inserted here -->
+    </div> <!-- Close Footer -->
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+/* CSS Document */
+@charset "utf-8";
+
+body {
+	margin:0px;
+	padding:0px;
+	background-color:#FFF;
+}
+
+h2 {
+	background-color:#66CC99;
+	padding:8px;
+	margin:0px;
+	border:ridge;
+	font-family:Arial, Verdana, sans-serif;
+	font-size:20px;
+	color:#C60;
+	text-align:center;
+}
+
+h4 {
+	background-color:#3399CC;
+	padding:5px;
+	margin-top:10px;
+	margin-bottom:10px;
+	font-family:Arial, Verdana, sans-serif;
+	font-size:18px;
+	color:#C60;
+	text-align:center;
+}
+
+img {
+	width:200px;
+	height:200px;
+	margin-left:10px;
+}
