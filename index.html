@@ -12,7 +12,23 @@
 <script>
 $(document).ready(function(){
 	$('#h_container').load('resources/header.html');
-    $('#f_container').load('resources/footer.html');
+	$('#b_content').load('resources/homepage.html');
+    $('footer').load('resources/footer.html');
+	
+	var open = true;
+	$('#f_slideButton').click(function() {
+        if(open === false) { // open it
+            $('#f_container').animate({ height:"180px" });
+			$('#b_sidebar').animate({ bottom:"180px" });
+			$('footer').show();
+            open = true;
+	    } else { // close it
+            $('#f_container').animate({ height:"0px" });
+			$('#b_sidebar').animate({ bottom:"0px" });
+			$('footer').hide();
+	        open = false;
+	    }
+	});
 });
 </script>
         
@@ -22,22 +38,24 @@ $(document).ready(function(){
         	<object data="resources/sidebar.html" width="100%" height="100%"></object>
         </div> <!-- Close SideBar -->
         
-        <div id="b_content">
+        <div id="b_container">
             <div id="h_container"> <!-- Header -->
                 <!-- Header inserted here -->
             </div> <!-- Close Header -->
-                    
-            <div id="b_container" style="clear:both;"> <!-- Body -->
-            <p>
-                Info about me would go around here along with a picture nearby (focused on header and footer this whole time).
-            </p>
-            <img src="images/Profile_Picture.png" width=240 height=360 alt="Profile Picture"/>
-            </div> <!-- Close Body -->
+            
+            <div id="b_bgDisplay">
+                <div id="b_content" style="clear:both;"> <!-- Body -->
+                    <!-- Page content insreted here -->
+                </div> <!-- Close Body -->
+            </div> <!-- Close b_bgDisplay -->
         </div> <!-- Close b_content -->
     </div> <!-- Close "no footer" -->
     
     <div id="f_container"> <!-- Footer -->
-		<!-- Footer inserted here -->
+    <div id="f_slideButton"></div>
+         <footer>
+            <!-- Footer inserted here -->
+        </footer>
     </div> <!-- Close Footer -->
 </div>
 </body>

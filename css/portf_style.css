@@ -6,6 +6,7 @@ body {
 	/* No border, objects go to edge */
 	margin:0px;
 	border:0px;
+	background-color:rgba(237,208,169,1);
 }
 
 /* Header */
@@ -51,21 +52,20 @@ footer {
 	width:800px;
 	margin-left:auto;
 	margin-right:auto;
-	margin-bottom:0px;
+	margin-bottom:1px; /* Get total height to 180px */
 	position:relative;
 }
 footer p {
+	margin:0px;
+	padding:0px;
+	padding-right:10px;
 	font-size:26px;
 	font-family:Arial, Verdana, sans-serif;
 	font: bold;
 	color:#C60;
-	margin-top:-10px;
-	margin-bottom:2px;
-	padding-right:10px;
 }
 footer table {
 	width:350px;
-	height:109px;
 	margin-left:auto;
 	margin-right:auto;
 	position:relative;
@@ -80,12 +80,16 @@ footer table {
 	min-width:100%;
 	top:0px;
 	position:absolute;
-	background-color:#24A41E;
+	background: url(../images/Background%20Image.jpg) no-repeat center center fixed;
+	-webkit-background-size: inherit;
+	-moz-background-size: inherit;
+	-o-background-size: inherit;
+	background-size: inherit;
 }
 
 #b_no_footer {
-	min-height:100%;
 	min-width:100%;
+	min-height:100%;
 }
 
 #b_sidebar {
@@ -97,8 +101,8 @@ footer table {
 	position:absolute;
 }
 
-#b_content {
-	margin-left:260px;
+#b_container {
+	margin-left:250px; /* sidebar width */
 }
 
 #h_container {
@@ -108,13 +112,23 @@ footer table {
 	clear:both;
 }
 
-#b_container {
-	display:block;
+#b_bgDisplay {
+	width:100%;
+	margin-bottom:195px; /* footer height+15 */
+	padding-top:20px;
+	padding-bottom:20px;
 	float:left;
+	background-color:rgba(10,30,10,0.8);
+}
+
+#b_content {
+	display:block;
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 #f_container {
-	height:180px;
 	position:absolute;
 	bottom:0px;
 	left:0px;
@@ -124,10 +138,60 @@ footer table {
 	clear:both;
 }
 
+#f_slideButton {
+	background-color:#000;
+	position: absolute;
+	top: -55px;
+	right:50%;
+	width:50px;
+	height:50px;
+	border: none;
+	cursor: pointer;
+}
+
 #f_inside {
 	width:75%;
-	height:95%;
 	margin:auto;
 	margin-top:9px;
 	position:relative;
+}
+
+/**/
+/* Content Custom ID's */
+/**/
+
+/* homepage.html */
+#hpg_profile_pic_border {
+	width:280px;
+	height:400px;
+	padding:20px;
+	background-color:#3399CC;
+	position:absolute;
+	align:left;
+	float:left;
+}
+
+#hpg_profile_pic_container {
+	width:240px;
+	height:360px;
+	padding:20px;
+	margin:auto;
+	background-color:#FFF;
+}
+
+#hpg_body_border {
+	width:900px;
+	margin:auto;
+	margin-left:50px;
+	margin-top:185px;
+	padding:20px;
+	background-color:#3399CC;
+	float:right;
+}
+
+#hpg_body_content {
+	width:860px;
+	margin:auto;
+	padding:20px;
+	background-color:#FFF;
 }
