@@ -2,36 +2,14 @@
 <html>
 <head>
 <meta charset="utf-8">
-
-<script src="js/jquery-1.11.1.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script src="js/pageControl.js"></script>
 <link rel="stylesheet" type="text/css" href="css/portf_style.css" media="screen" />
+
 <title>Joshua Morgan Portfolio</title>
 </head>
 
-<body>
-<script>
-$(document).ready(function(){
-	$('#h_container').load('resources/header.html');
-	$('#b_content').load('resources/homepage.html');
-    $('footer').load('resources/footer.html');
-	
-	var open = true;
-	$('#f_slideButton').click(function() {
-        if(open === false) { // open it
-            $('#f_container').animate({ height:"180px" });
-			$('#b_sidebar').animate({ bottom:"180px" });
-			$('footer').show();
-            open = true;
-	    } else { // close it
-            $('#f_container').animate({ height:"0px" });
-			$('#b_sidebar').animate({ bottom:"0px" });
-			$('footer').hide();
-	        open = false;
-	    }
-	});
-});
-</script>
-        
+<body>  
 <div id="b_main">
 	<div id="b_no_footer"> <!-- All above the footer -->
     	<div id="b_sidebar"> <!-- SideBar -->
@@ -40,7 +18,18 @@ $(document).ready(function(){
         
         <div id="b_container">
             <div id="h_container"> <!-- Header -->
-                <!-- Header inserted here -->
+                <header>
+                    <h1>Joshua Morgan</h1>
+                
+                    <nav>
+                      <ul>
+                      <li><a href="#" class="link_home">Home</a></li>
+                      <li><a href="#" class="link_jobs">Jobs</a></li>
+                      <li><a href="#" class="link_languages">Languages</a></li>
+                      <li><a href="#" class="link_resume">Resume</a></li>
+                      </ul>
+                    </nav>
+            </header>
             </div> <!-- Close Header -->
             
             <div id="b_bgDisplay">
@@ -52,7 +41,7 @@ $(document).ready(function(){
     </div> <!-- Close "no footer" -->
     
     <div id="f_container"> <!-- Footer -->
-    <div id="f_slideButton"></div>
+   		<div id="f_slideButton"></div> <!-- Footer display button -->
          <footer>
             <!-- Footer inserted here -->
         </footer>
