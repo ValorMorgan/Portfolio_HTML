@@ -17,20 +17,39 @@ $(document).ready(function(){
 	    }
 	});
 	
+	/* curPage values
+	 * 0 = homepage
+	 * 1 = jobs
+	 * 2 = languages
+	 * 3 = resume
+	 */
+	var curPage = 0;
 	$('.link_home').click(function() {
-		$('#b_content').empty();
-		$('#b_content').load('resources/homepage.html');
+		if(curPage !== 0) {
+			$('#b_content').empty();
+			$('#b_content').load('resources/homepage.html');
+			curPage = 0;
+		}
 	});
 	$('.link_jobs').click(function() {
-		$('#b_content').empty();
-		$('#b_content').load('resources/homepage.html');
+		if(curPage !== 1) {
+			$('#b_content').empty();
+			$('#b_content').load('resources/jobs.html');
+			curPage = 1;
+		}
 	});
 	$('.link_languages').click(function() {
-		$('#b_content').empty();
-		$('#b_content').load('resources/homepage.html');
+		if(curPage !== 2) {
+			$('#b_content').empty();
+			$('#b_content').load('resources/homepage.html');
+			curPage = 2;
+		}
 	});
 	$('.link_resume').click(function() {
-		$('#b_content').empty();
-		$('#b_content').load('resources/homepage.html');
+		if(curPage !== 3) {
+			$('#b_content').empty();
+			$('#b_content').load('resources/homepage.html');
+			curPage = 3;
+		}
 	});
 });
