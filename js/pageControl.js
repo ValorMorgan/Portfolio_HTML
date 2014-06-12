@@ -7,11 +7,13 @@ $(document).ready(function(){
         if(open === false) { // open it
             $('#f_container').animate({ height:"180px" });
 			$('#b_sidebar').animate({ bottom:"180px" });
+			$('#f_slideButton').animate({ bottom:"185px" });
 			$('footer').show();
             open = true;
 	    } else { // close it
             $('#f_container').animate({ height:"0px" });
 			$('#b_sidebar').animate({ bottom:"0px" });
+			$('#f_slideButton').animate({ bottom:"5px" });
 			$('footer').hide();
 	        open = false;
 	    }
