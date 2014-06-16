@@ -5,22 +5,21 @@ $(document).ready(function(){
 	var open = true;
 	$('#f_slideButton').click(function() {
         if(open === false) { // open it
-            
+            $('#f_container').animate({ height:"180px" });
 			$('#b_sidebar').animate({ bottom:"180px" });
 			$('#f_slideButton').animate({ bottom:"185px" });
-			$('#f_container').slideDown(500, function() {
-				$('#f_container').animate({ height:"180px" });
-				$('footer').show();
-			});
+			$('footer').show();
+			$('#b_bgDisplay').animate({ marginBottom:"200px" });
+			$("html, body").animate({ scrollTop: $(document).height() }, 500);
             open = true;
 	    } else { // close it
+			$('#f_container').animate({ height:"0px", marginBottom:"0px" });
             $('footer').slideUp(500, function() {
-				$('#f_container').animate({ height:"0px" });
 				$('footer').hide();
 			});
 			$('#b_sidebar').animate({ bottom:"0px" });
 			$('#f_slideButton').animate({ bottom:"5px" });
-			
+			$('#b_bgDisplay').animate({ marginBottom:"20px" });
 	        open = false;
 	    }
 	});
