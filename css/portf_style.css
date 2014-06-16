@@ -156,7 +156,7 @@ footer table {
 	background-color:#0099FF;
 	position: absolute;
 	bottom:185px;
-	right:50%;
+	right:48%;
 	width:100px;
 	height:20px;
 	border: none;
@@ -187,13 +187,15 @@ footer table {
 
 #default_pic {
 	/* Default width and height for pictures */
-	width:240px;
-	height:240px;
+	width:200px;
+	height:200px;
 }
 
 #text_border {
 	width:900px;
 	padding:20px;
+	margin-left:auto;
+	margin-right:auto;
 	background-color:#3399CC;
 }
 
@@ -219,6 +221,41 @@ footer table {
 	margin-bottom:0px;
 }
 
+#anchor_border {
+	width:700px;
+	padding:20px;
+	margin-bottom:-20px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#3399CC;
+}
+
+#anchor_content {
+	padding:20px;
+	background-color:#FFF;
+}
+
+#anchor_content nav {
+	margin:0 auto;
+	font-family:Arial, Verdana, sans-serif;
+	font-size:24px;
+}
+
+#anchor_content nav ul {
+	width:620px;
+	padding:0;
+	margin:0 auto;
+}
+
+#anchor_content nav ul li {
+	display:inline;
+	margin-left:30px;
+}
+
+#anchor_content nav ul li:before {
+	list-style-type:square;
+}
+
 /* homepage.html */
 #hpg_header {
 	margin-top:50px;
@@ -233,8 +270,24 @@ footer table {
 	float:right;
 }
 
+#hpg_text_wrap {
+	width:235px;
+	height:250px;
+	float:left;
+}
+
+#hpg_rec_more p {
+	margin-top:0px;
+}
+
+#hpg_hob_more p {
+	margin-top:0px;
+}
+
 /* jobs.html */
 #jbs_header {
+	margin-top:50px;
+	margin-bottom:50px;
 	margin-left:auto;
 	margin-right:auto;
 	font-family:Arial, Verdana, sans-serif;
@@ -244,4 +297,29 @@ footer table {
 	text-decoration:underline;
 	text-align:center;
 	color:#C60;
+}
+
+#jbs_text_wrap {
+	width:220px;
+	height:90px;
+	float:right;
+}
+
+/* languages.html */
+#lng_header {
+	margin-left:auto;
+	margin-right:auto;
+	font-family:Arial, Verdana, sans-serif;
+	font-size:48px;
+	font-style:italic;
+	font-weight:600;
+	text-decoration:underline;
+	text-align:center;
+	color:#C60;
+}
+
+#lng_text_wrap {
+	width:220px;
+	height:150px;
+	float:right;
 }
