@@ -1,6 +1,17 @@
+var curPage = 0;
+
+
+
 $(document).ready(function(){
 	$('#b_content').load('resources/homepage.html');
     $('footer').load('resources/footer.html');
+	
+	// Failed "disable middle click"
+	$("body").on('click', function(e) { 
+	   if( e.which === 2 ) {
+		  e.preventDefault();
+	   }
+	});
 	
 	var open = true;
 	$('#f_slideButton').click(function() {
@@ -13,7 +24,7 @@ $(document).ready(function(){
 			$("html, body").animate({ scrollTop: $(document).height() }, 500);
             open = true;
 	    } else { // close it
-			$('#f_container').animate({ height:"0px", marginBottom:"0px" });
+			$('#f_container').animate({ height:"0px", Bottom:"-1px" });
             $('footer').slideUp(500, function() {
 				$('footer').hide();
 			});
@@ -23,21 +34,6 @@ $(document).ready(function(){
 	        open = false;
 	    }
 	});
-	/*$('#f_slideButton').click(function() {
-        if(open === false) { // open it
-            $('#f_container').animate({ height:"180px" });
-			$('#b_sidebar').animate({ bottom:"180px" });
-			$('#f_slideButton').animate({ bottom:"185px" });
-			$('footer').show();
-            open = true;
-	    } else { // close it
-            $('#f_container').animate({ height:"0px" });
-			$('#b_sidebar').animate({ bottom:"0px" });
-			$('#f_slideButton').animate({ bottom:"5px" });
-			$('footer').hide();
-	        open = false;
-	    }
-	});*/
 	
 	/* Smooth Scrolling Function */
 	/* How to use */
@@ -58,43 +54,57 @@ $(document).ready(function(){
     	}
 	});
 	
-	/* curPage values
-	 * 0 = homepage
-	 * 1 = jobs
-	 * 2 = languages
-	 * 3 = resume
-	 */
-	var curPage = 0;
 	$('.link_home').click(function(evt) {
 		evt.preventDefault();
-		if(curPage !== 0) {
-			$('#b_content').empty();
-			$('#b_content').load('resources/homepage.html');
-			curPage = 0;
-		}
+		changePage(0);
 	});
 	$('.link_jobs').click(function(evt) {
 		evt.preventDefault();
-		if(curPage !== 1) {
-			$('#b_content').empty();
-			$('#b_content').load('resources/jobs.html');
-			curPage = 1;
-		}
+		changePage(1);
 	});
 	$('.link_languages').click(function(evt) {
 		evt.preventDefault();
-		if(curPage !== 2) {
-			$('#b_content').empty();
-			$('#b_content').load('resources/languages.html');
-			curPage = 2;
-		}
+		changePage(2);
 	});
 	$('.link_resume').click(function(evt) {
 		evt.preventDefault();
-		if(curPage !== 3) {
-			$('#b_content').empty();
-			$('#b_content').load('resources/homepage.html');
-			curPage = 3;
-		}
+		changePage(3);
 	});
 });
+
+/* pageID values
+ * 0 = homepage
+ * 1 = jobs
+ * 2 = languages
+ * 3 = resume
+ * 4 = proj_cse335
+ * 5 = proj_campusTraffic
+ */
+var changePage = function(pageID) {
+	if(curPage != pageID) {
+		$('#b_content').empty();
+		curPage = pageID;
+		
+		switch (curPage) {
+			case 0:
+				$('#b_content').load('resources/homepage.html');
+				break;
+				
+			case 1:
+				$('#b_content').load('resources/jobs.html');
+				break;
+				
+			case 2:
+				$('#b_content').load('resources/languages.html');
+				break;
+				
+			case 3:
+				$('#b_content').load('resources/homepage.html');
+				break;
+				
+			case 4:
+				$('#b_content').load('resources/projects/cse335.html');
+				break;
+		}
+	}
+};
