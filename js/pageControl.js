@@ -1,7 +1,5 @@
 var curPage = 0;
 
-
-
 $(document).ready(function(){
 	$('#b_content').load('resources/homepage.html');
     $('footer').load('resources/footer.html');
@@ -19,6 +17,7 @@ $(document).ready(function(){
             $('#f_container').animate({ height:"180px" });
 			$('#b_sidebar').animate({ bottom:"180px" });
 			$('#f_slideButton').animate({ bottom:"185px" });
+			$('#f_slideButton').css("background-image", "url(images/slideButtonDown.png)");
 			$('footer').show();
 			$('#b_bgDisplay').animate({ marginBottom:"200px" });
 			$("html, body").animate({ scrollTop: $(document).height() }, 500);
@@ -26,10 +25,11 @@ $(document).ready(function(){
 	    } else { // close it
 			$('#f_container').animate({ height:"0px", Bottom:"-1px" });
             $('footer').slideUp(500, function() {
-				$('footer').hide();
+				//$('footer').hide();
 			});
-			$('#b_sidebar').animate({ bottom:"0px" });
+			$('#b_sidebar').animate({ bottom:"1px" });
 			$('#f_slideButton').animate({ bottom:"5px" });
+			$('#f_slideButton').css("background-image", "url(images/slideButtonUp.png)");
 			$('#b_bgDisplay').animate({ marginBottom:"20px" });
 	        open = false;
 	    }
@@ -104,6 +104,10 @@ var changePage = function(pageID) {
 				
 			case 4:
 				$('#b_content').load('resources/projects/cse335.html');
+				break;
+				
+			case 5:
+				$('#b_content').load('resources/projects/campustraffic.html');
 				break;
 		}
 	}

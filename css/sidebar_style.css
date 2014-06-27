@@ -8,7 +8,7 @@ body {
 }
 
 h2 {
-	background-color:#66CC99;
+	background-color:#00CC99;
 	padding:8px;
 	margin:0px;
 	border:ridge;
@@ -32,5 +32,10 @@ h4 {
 img {
 	width:200px;
 	height:200px;
-	margin-left:10px;
+}
+
+.img_center {
+	width:200px;
+	margin-left:auto;
+	margin-right:auto;
 }
