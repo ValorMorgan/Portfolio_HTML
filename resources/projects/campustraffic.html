@@ -1,3 +1,30 @@
-		<p id="proj_header">
+		<p id="page_header">
         	Campus Traffic
         </p>
+        
+         <div id="text_border">
+        	<div id="text_content">
+          	  <div id="pic_border" style="margin-top:-70px; margin-left:350px;">
+                    <div id="pic_container">
+                        <div style="width:500px; height:300px;">
+                            <img src="images/Project_campusTraffic.png" width="500px" height="300px" alt="Campus Traffic"/>
+                        </div>
+                    </div>
+                </div>
+                <div id="proj_text_wrap"></div>
+            	<h4 style="text-align:center;">Outline</h4>
+                <hr/>
+                <p>
+                	Created durring the Kuali Rice Internship, Campus Traffic was a project designed to originally test our skills in Java creation and interaction with HTML, CSS, JavaScript, and SQL.  Campus Traffic is a web based application that interacts with an online server to access parking lot information from the parking office in order to populate a google map api with markers to specific lots as well as the capacity and current number of vehicles there and any obstructions that exist on the roads nearby.  If a student, staff member, or visiting individual were planning to drive to campus, this app would allow them to quickly check the status of all the campus lots and determine where to park and which route to take ahead of time instead of being forced into a situation of searching from lot to lot in order to find a space to park.
+                </p>
+                
+                <h4>Current Features & Future Plans</h4>
+                <hr/>
+                <p>
+                	The application left off with a database that we created using Derby and accessed using Apache.  We were able to populate the database remotely and update the map dynamicly as information was added.  The map featured a drop down menu to quickly find lots and marker popups to display the parking lot information.  An adminisration page existed that created a dynamic table which took input and validated it before passing the information into the server and adding it or editing data in the database.
+                </p>
+                <p>
+                	If the program were to continue to be implemented fully into the campus systems, we would add a more exact marking system for obstructions that draws polygons on the map to cover entire obstruction areas as well as color code these areas to reflect the type of obstruction.  As well, the database would gather real time information from parking lots and recognize spaces for parking meters, closed ramps, and spaces that may be blocked due to an outside factor (i.e. a snow pile in winter).  Finally, the application would be ported to mobile devices and would be able to access a user's gps in order to give them directions to a parking lot as well as better determine the population density of the traffic on campus.
+                </p>
+            </div> <!-- End text_content -->
+        </div> <!-- End text_border -->

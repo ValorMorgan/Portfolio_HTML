@@ -1,6 +1,7 @@
 var curPage = 0;
 
 $(document).ready(function(){
+	$('#b_content').empty();
 	$('#b_content').load('resources/homepage.html');
     $('footer').load('resources/footer.html');
 	
@@ -16,7 +17,7 @@ $(document).ready(function(){
         if(open === false) { // open it
             $('#f_container').animate({ height:"180px" });
 			$('#b_sidebar').animate({ bottom:"180px" });
-			$('#f_slideButton').animate({ bottom:"185px" });
+			$('#f_slideButton').animate({ bottom:"182px" });
 			$('#f_slideButton').css("background-image", "url(images/slideButtonDown.png)");
 			$('footer').show();
 			$('#b_bgDisplay').animate({ marginBottom:"200px" });
@@ -28,7 +29,7 @@ $(document).ready(function(){
 				//$('footer').hide();
 			});
 			$('#b_sidebar').animate({ bottom:"1px" });
-			$('#f_slideButton').animate({ bottom:"5px" });
+			$('#f_slideButton').animate({ bottom:"2px" });
 			$('#f_slideButton').css("background-image", "url(images/slideButtonUp.png)");
 			$('#b_bgDisplay').animate({ marginBottom:"20px" });
 	        open = false;
@@ -82,6 +83,7 @@ $(document).ready(function(){
  */
 var changePage = function(pageID) {
 	if(curPage != pageID) {
+		$('#b_bgDisplay').css("min-height", "2160px");
 		$('#b_content').empty();
 		curPage = pageID;
 		
@@ -99,7 +101,7 @@ var changePage = function(pageID) {
 				break;
 				
 			case 3:
-				$('#b_content').load('resources/homepage.html');
+				$('#b_content').load('resources/resume.html');
 				break;
 				
 			case 4:
@@ -110,5 +112,6 @@ var changePage = function(pageID) {
 				$('#b_content').load('resources/projects/campustraffic.html');
 				break;
 		}
+		$('#b_bgDisplay').css("min-height", "0px");
 	}
 };
