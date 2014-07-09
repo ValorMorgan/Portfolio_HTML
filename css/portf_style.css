@@ -1,3 +1,35 @@
+/** Format Order
+ * width
+ * min-width
+ * height
+ * min-height
+ * top
+ * bottom
+ * left
+ * right
+ * margin
+ * border
+ * padding
+ * display
+ * float/position
+ * background
+ * bg-size
+ * bg-color
+ * bg-image
+ * text-align
+ * text-decoration
+ * font-family
+ * font-size
+ * font-weight
+ * font-style
+ * text color "color"
+ * list-style
+ * cursor
+ * clear
+ * 
+ * up - down - left - right
+ */
+
 /* CSS Document */
 @charset "utf-8";
 
@@ -129,6 +161,10 @@ footer table {
 	margin-left:auto;
 	margin-right:auto;
 	position:relative;
+	font-family:'Arial-local', Arial, Verdana, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#000000;
 }
 
 /* Links */
@@ -262,7 +298,7 @@ a:active {
 	font-family:'Arial-local', Arial, Verdana, sans-serif;
 	font-size:48px;
 	font-style:italic;
-	font-weight:600;
+	font-weight:bold;
 	color:#CC6600;
 }
 
